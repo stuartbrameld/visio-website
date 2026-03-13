@@ -7,14 +7,14 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { SITE_TITLE } from '../consts';
 
-type Props = CollectionEntry<'news'>['data'];
+type Props = CollectionEntry<'news'>['data'] & { slug?: string };
 
-const { title, description, author, pubDate, updatedDate, heroImage, tags } = Astro.props;
+const { title, description, author, pubDate, updatedDate, heroImage, tags, slug } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={`${title} — ${SITE_TITLE}`} description={description} />
+		<BaseHead title={`${title} — ${SITE_TITLE}`} description={description} slug={slug} />
 		<style>
 			.article-header {
 				padding: var(--space-3xl) 0 var(--space-xl);
