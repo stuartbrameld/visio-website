@@ -7,7 +7,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_TITLE } from '../../consts';
 
-const posts = (await getCollection('blog')).sort((a, b) => {
+const posts = (await getCollection('news')).sort((a, b) => {
 	if (a.data.pinned && !b.data.pinned) return -1;
 	if (!a.data.pinned && b.data.pinned) return 1;
 	return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
@@ -17,7 +17,7 @@ const posts = (await getCollection('blog')).sort((a, b) => {
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`Blog — ${SITE_TITLE}`} description="Insights and updates from the Visio.ai team." />
+		<BaseHead title={`News — ${SITE_TITLE}`} description="Insights and updates from the Visio.ai team." />
 		<style>
 			.page-hero {
 				padding: var(--space-4xl) 0 var(--space-3xl);
@@ -43,7 +43,7 @@ const posts = (await getCollection('blog')).sort((a, b) => {
 				color: var(--color-text-secondary);
 			}
 
-			.blog-content {
+			.news-content {
 				padding: 0 0 var(--space-5xl);
 			}
 
@@ -151,19 +151,19 @@ const posts = (await getCollection('blog')).sort((a, b) => {
 		<main>
 			<section class="page-hero">
 				<div class="container">
-					<p class="section-label animate-in">Blog</p>
+					<p class="section-label animate-in">News</p>
 					<h1 class="animate-in animate-in-delay-1">Insights & Updates</h1>
 					<p class="page-hero-description animate-in animate-in-delay-2">Thinking and updates from the Visio.ai team.</p>
 				</div>
 			</section>
 
-			<section class="blog-content">
+			<section class="news-content">
 				<div class="container">
 					<ul class="posts-grid">
 						{
 							posts.map((post) => (
 								<li>
-									<a href={`/blog/${post.id}/`} class="post-card">
+									<a href={`/news/${post.id}/`} class="post-card">
 										{post.data.heroImage && (
 											<Image width={720} height={360} src={post.data.heroImage} alt="" />
 										)}

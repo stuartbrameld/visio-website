@@ -1,11 +1,11 @@
-# AGENTS.md
+# CLAUDE.md
 
 > Always keep `CLAUDE.md` and `AGENTS.md` in sync with the same contents.
 > If you update `CLAUDE.md`, always update `AGENTS.md` with the same changes.
 
 ## Project
 
-Marketing website and blog for **Visio.ai** — an AI co-pilot for store operations. Deployed as a static site.
+Marketing website and news section for **Visio.ai** — an AI co-pilot for store operations. Deployed as a static site.
 
 GitHub repo: https://github.com/stuartbrameld/visio-website
 
@@ -39,11 +39,13 @@ pnpm build     # Production build
 pnpm preview   # Preview production build
 ```
 
-## Blogs
+## News
 
-Blog posts go in `src/content/blog/`. Default to plain Markdown (`.md`) over `.mdx`.
+All content is published under `/news` (not `/blog`). This reflects the site's focus on legitimate, substantive content — company updates, announcements, and industry insights — rather than informal blog-style posts.
 
-Blog frontmatter fields:
+News posts go in `src/content/news/`. Default to plain Markdown (`.md`) over `.mdx`.
+
+News frontmatter fields:
 
 ```yaml
 title: 'Precision Retail: The future is about maximizing your store''s full potential'
@@ -53,10 +55,10 @@ pubDate: 'Oct 15 2025'
 heroImage: '../../assets/blog-placeholder-1.jpg'
 ```
 
-- **Required**: `title`, `description`, `author`, `pubDate`, `heroImage` — all blog posts must include these fields or the build will fail (enforced by the Zod schema in `src/content.config.ts`).
-- **Optional**: `updatedDate`, `pinned` (boolean — pinned posts sort first on the blog listing page), `tags` (string array — displayed as chips on listing and post pages; current values: `Precision Retail`, `Success Story`, `Platform Update`)
+- **Required**: `title`, `description`, `author`, `pubDate`, `heroImage` — all news posts must include these fields or the build will fail (enforced by the Zod schema in `src/content.config.ts`).
+- **Optional**: `updatedDate`, `pinned` (boolean — pinned posts sort first on the news listing page), `tags` (string array — displayed as chips on listing and post pages; current values: `Precision Retail`, `Success Story`, `Platform Update`)
 - Hero images should be placed in `src/assets/`
-- **No horizontal rules**: Strip all `---` from blog post body content (outside frontmatter). Headings alone provide section separation.
+- **No horizontal rules**: Strip all `---` from news post body content (outside frontmatter). Headings alone provide section separation.
 
 ## Project Structure
 
@@ -70,14 +72,14 @@ src/
 │   ├── HeaderLink.astro # Nav link with active state detection
 │   └── FormattedDate.astro
 ├── content/
-│   └── blog/            # Markdown/MDX blog posts
+│   └── news/            # Markdown/MDX news posts
 ├── layouts/
-│   └── BlogPost.astro   # Blog post page layout
+│   └── BlogPost.astro   # News post page layout
 ├── pages/
 │   ├── index.astro      # Marketing landing page
 │   ├── about.astro      # About page
-│   ├── blog/
-│   │   ├── index.astro  # Blog listing
+│   ├── news/
+│   │   ├── index.astro  # News listing
 │   │   └── [...slug].astro
 │   └── rss.xml.js       # RSS feed
 ├── styles/
