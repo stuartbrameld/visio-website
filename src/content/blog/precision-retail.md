@@ -1,5 +1,5 @@
 ---
-title: 'Precision Retail: The future is about maximizing your store''s full potential'
+title: 'The future is about maximizing your store''s full potential'
 description: 'Precision Retail is a methodology focused on prioritizing resources and efforts to maximize ROI in physical stores, bringing the same level of control and learning speed that e-commerce has long enjoyed.'
 author: 'Matheus Flores'
 pubDate: 'Oct 15 2025'
