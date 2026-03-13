@@ -6,6 +6,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://visio-website.pages.dev',
+	site: 'https://visio-website.growthmethod.workers.dev',
 	integrations: [mdx(), sitemap()],
 });
