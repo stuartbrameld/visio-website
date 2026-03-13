@@ -18,7 +18,7 @@ Based on the first-party Astro blog starter template (`withastro/astro/examples/
 - **Framework**: Astro 5 (static site generation)
 - **Content**: Markdown + MDX via Astro Content Collections
 - **Styling**: Vanilla CSS with CSS custom properties (no Tailwind, no CSS-in-JS)
-- **Fonts**: Montserrat (headings) + Inter (body) via Google Fonts
+- **Fonts**: IBM Plex Sans (primary) + JetBrains Mono (monospace) via Google Fonts
 - **Images**: Optimised with `astro:assets` and Sharp
 - **Package manager**: pnpm (not npm)
 - **Integrations**: `@astrojs/mdx`, `@astrojs/rss`, `@astrojs/sitemap`
@@ -92,37 +92,50 @@ public/
 
 ## Design System & Brand
 
+For the full brand identity (colours, typography, voice, shape language, motion, detection overlays, dark mode), see **`docs/brand-book.md`**.
+
+**Design direction**: Premium, refined, quiet confidence. Like Linear/Stripe — not HubSpot/Monday. Generous whitespace, polished details, no flashy effects.
+
 ### Colours
 
-The brand uses a teal/turquoise palette with blue-to-green gradient accents. All colours are defined as CSS custom properties in `global.css`:
+The brand uses a blue primary with cyan secondary and orange accent. All colours are defined as CSS custom properties in `global.css`:
 
-- **Primary accent**: `--teal-400` (#1fc0a2) through `--teal-700` (#146770)
-- **Gradient**: `--gradient-start` (#1fc0a2) → `--gradient-mid` (#20bccc) → `--gradient-end` (#146770)
-- **Logo gradient**: #00A5DB (blue) → #71C27D (green) — do not change these
-- **Neutrals**: `--gray-50` through `--gray-900`
-- **Semantic tokens**: `--color-accent`, `--color-text`, `--color-bg`, etc.
-- **Brand & design system**: For brand guidelines, visual identity, and positioning, see https://github.com/Visio-ai/arch-design-system/tree/master/domains
-- **Design direction**: Matheus (CEO) wants a more premium feel — prioritise refinement, generous whitespace, and polished details over flashy effects
+- **Primary**: `--color-primary-500` (#0566F7 Electric Royal) — buttons, links, brand colour
+- **Secondary**: `--color-secondary-500` (#0891B2 Cyan Vivid) — info labels, secondary actions
+- **Accent**: `--color-accent-500` (#F97316 Tangerine) — CTAs on dark, warnings
+- **Near-black**: `--color-neutral-950` (#030712) / Abyss (#082035) for dark surfaces
+- **Neutrals**: `--color-neutral-50` through `--color-neutral-950` (pure gray, no hue tint)
+- **Semantic**: success (#15803D), warning (#92400E), error (#DC2626), info (#0891B2)
+- Each colour has a full 50–950 scale — see `docs/brand-book.md` Section 4 for all steps
 
 ### Typography
 
-- **Headings**: `var(--font-display)` — Montserrat, weights 400–800
-- **Body**: `var(--font-body)` — Inter, weights 400–600
-- Headings use `letter-spacing: -0.02em` and tight line-height (1.15)
+- **Primary font**: `var(--font-body)` — IBM Plex Sans, weights 300–700
+- **Monospace**: `var(--font-mono)` — JetBrains Mono, weights 400–500
+- Marketing base size: 16px. Scale ratio: 1.125 (Major Second)
+- Display headings (42px+): weight 300. Small headings (16-20px): weight 600
+- `font-variant-numeric: tabular-nums` on all numbers
+- Uppercase: overlines and tags only — never for body text or headings
 
 ### Spacing & Layout
 
 - Use spacing variables: `--space-xs` through `--space-5xl`
 - Max content width: `--max-width` (1200px), narrow: `--max-width-narrow` (720px)
 - Use the `.container` class for page-width content
-- Border radius: `--radius-sm` through `--radius-xl`
+- Border radius: `--radius-card` (6px), `--radius-button` (4px), `--radius-chip` (2px)
+
+### Motion
+
+- Entrances: 200ms ease-out. Exits: 150ms ease-in
+- Standard pattern: opacity + 4px translateY only. No scale, no bounce, no spring
+- Motion confirms action — never decorates
 
 ### Components
 
 - Buttons: `.btn`, `.btn--primary`, `.btn--secondary`
-- Section labels: small uppercase teal text above section headings
+- Section labels: small uppercase primary-coloured text above section headings
 - Feature cards: white cards with border, rounded corners, hover lift effect
-- Animations: `.animate-in` with delay variants for staggered reveals
+- Icons: Lucide (stroke-only, 1.5px stroke, `currentColor`)
 
 ## Conventions
 
@@ -163,4 +176,8 @@ The brand uses a teal/turquoise palette with blue-to-green gradient accents. All
 - Don't hardcode colour values — use CSS variables
 - Don't put optimisable images in `public/` — use `src/assets/`
 - Don't modify the logo SVG files
-- Don't change the Google Fonts imports without approval
+- Don't change the font imports (IBM Plex Sans + JetBrains Mono) without approval
+
+## Skills
+
+Using the Anthropic frontend design skill: `anthropics/skills@frontend-design`
