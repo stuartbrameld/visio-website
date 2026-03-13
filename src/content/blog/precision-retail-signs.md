@@ -3,7 +3,7 @@ title: 'The signs of transformation in store operations'
 description: 'Multiple forces are converging in retail—data overload, workforce challenges, and technological advancement—creating the conditions for a new approach we call Precision Retail.'
 author: 'Matheus Flores'
 pubDate: 'Oct 15 2025'
-heroImage: '../../assets/stock/istockphoto-1849456277-2048x2048.jpg'
+heroImage: '../../assets/stock/istockphoto-2209114071-1024x1024.jpg'
 ---
 
 In our stores every day, you can sense that something no longer fits. Something fundamental is shifting in retail, and it's not just another fashion trend or a fleeting management approach. Multiple forces are converging, creating a turning point that is both subtle and profound.

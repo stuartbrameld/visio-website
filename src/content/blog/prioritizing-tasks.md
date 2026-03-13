@@ -3,7 +3,7 @@ title: 'Why prioritizing tasks will help your store grow again—fast'
 description: 'Discover how the ICE prioritization model can transform chaotic retail operations into focused, high-impact actions that drive real results for your store.'
 author: 'Matheus Flores'
 pubDate: 'Oct 15 2025'
-heroImage: '../../assets/stock/istockphoto-2222643016-2048x2048.jpg'
+heroImage: '../../assets/stock/istockphoto-2214908750-2048x2048.jpg'
 ---
 
 In the daily routine of retail and franchise stores, we see two types of managers – the "blank slates" who start each day from scratch, and the "hoarders" who maintain endless to-do lists.

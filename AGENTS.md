@@ -56,6 +56,7 @@ heroImage: '../../assets/blog-placeholder-1.jpg'
 - **Required**: `title`, `description`, `author`, `pubDate`, `heroImage` — all blog posts must include these fields or the build will fail (enforced by the Zod schema in `src/content.config.ts`).
 - **Optional**: `updatedDate`
 - Hero images should be placed in `src/assets/`
+- **No horizontal rules**: Strip all `---` from blog post body content (outside frontmatter). Headings alone provide section separation.
 
 ## Project Structure
 
