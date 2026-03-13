@@ -60,6 +60,16 @@ heroImage: '../../assets/blog-placeholder-1.jpg'
 - Hero images should be placed in `src/assets/`
 - **No horizontal rules**: Strip all `---` from news post body content (outside frontmatter). Headings alone provide section separation.
 
+### Tool Pages
+
+Tool announcements (e.g. Payroll Prep) are published as news articles — not standalone pages. Write them as article-style prose with the `Platform Update` tag.
+
+- **Format**: Plain Markdown in `src/content/news/`, same frontmatter as any news post
+- **Tag**: `['Platform Update']`
+- **SVG illustrations**: Animated product SVGs go in `public/tools/` and are embedded in the article body using `<figure>` + `<img>` tags (CSS animations within SVGs work when loaded via `<img>`)
+- **Structure**: Intro (problem statement) → How it works (prose, not grid) → SVG illustration → Benefits (narrative paragraphs) → Customer quotes → FAQ (bold Q&A pairs)
+- **Tone**: Article-style prose, not landing-page copy. No CTA buttons, gradient bands, or trust logo bars
+
 ## Project Structure
 
 ```
@@ -90,7 +100,8 @@ public/
 ├── logo.svg             # Dark logo (for light backgrounds)
 ├── logo-white.svg       # White logo (for dark backgrounds)
 ├── favicon.svg
-└── fonts/
+├── fonts/
+└── tools/               # Animated product SVGs for tool articles
 ```
 
 ## Design System & Brand

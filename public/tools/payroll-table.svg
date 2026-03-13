@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif">
+  <style>
+    .fade-in { opacity: 0; animation: fadeIn 0.5s ease forwards; }
+    .row-1 { animation-delay: 0.3s; }
+    .row-2 { animation-delay: 0.45s; }
+    .row-3 { animation-delay: 0.6s; }
+    .row-4 { animation-delay: 0.75s; }
+    .row-5 { animation-delay: 0.9s; }
+    .row-6 { animation-delay: 1.05s; }
+    .row-7 { animation-delay: 1.2s; }
+    .row-8 { animation-delay: 1.35s; }
+    .header-fade { animation-delay: 0s; }
+    .filters-fade { animation-delay: 0.1s; }
+    .cols-fade { animation-delay: 0.2s; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+    .exception { animation: pulse 2.2s ease-in-out infinite; }
+    .title { font-size: 22px; font-weight: 700; fill: #1E293B; }
+    .subtitle { font-size: 12px; fill: #64748B; }
+    .col-header { font-size: 11px; font-weight: 600; fill: #64748B; text-transform: uppercase; }
+    .cell-text { font-size: 12.5px; fill: #334155; }
+    .cell-name { font-size: 12.5px; fill: #1E293B; font-weight: 500; }
+    .btn { font-size: 11px; fill: #2563EB; font-weight: 500; }
+    .filter-label { font-size: 11px; fill: #64748B; }
+    .filter-value { font-size: 12.5px; fill: #1E293B; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1100" height="620" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Header -->
+  <g class="fade-in header-fade">
+    <!-- Visio logo area -->
+    <text x="40" y="36" font-size="14" font-weight="700" fill="#2563EB">VISIO</text>
+    <!-- Title -->
+    <text x="550" y="62" text-anchor="middle" class="title">Payroll hours review</text>
+    <text x="550" y="82" text-anchor="middle" class="subtitle">Review worked hours by pay period, spot adjustments, and fix issues before running payroll.</text>
+    <text x="550" y="97" text-anchor="middle" font-size="11" fill="#94A3B8">Week ending March 3rd, 2026</text>
+    <line x1="40" y1="110" x2="1060" y2="110" stroke="#E2E8F0" stroke-width="1"/>
+  </g>
+
+  <!-- Filters Row -->
+  <g class="fade-in filters-fade">
+    <!-- Week ending -->
+    <text x="40" y="132" class="filter-label">Week ending (pay period)</text>
+    <rect x="40" y="138" width="280" height="32" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="52" y="158" class="filter-value">March 3rd, 2026</text>
+
+    <!-- Payment frequency -->
+    <text x="340" y="132" class="filter-label">Payment frequency</text>
+    <rect x="340" y="138" width="200" height="32" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="352" y="158" class="filter-value">Biweekly</text>
+
+    <!-- Location -->
+    <text x="560" y="132" class="filter-label">Location</text>
+    <rect x="560" y="138" width="200" height="32" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="572" y="158" class="filter-value">All locations</text>
+
+    <!-- Search bar -->
+    <rect x="40" y="185" width="540" height="30" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="52" y="204" font-size="11" fill="#94A3B8">Search by employee or location</text>
+
+    <!-- Toggle and buttons -->
+    <text x="680" y="204" font-size="11" fill="#475569">Use fixed information</text>
+    <rect x="800" y="192" width="36" height="18" rx="9" fill="#2563EB"/>
+    <circle cx="827" cy="201" r="7" fill="#FFFFFF"/>
+    <rect x="848" y="190" width="22" height="22" rx="4" fill="#10B981"/>
+    <text x="853" y="205" font-size="9" fill="#FFFFFF" font-weight="600">M</text>
+
+    <!-- Export button -->
+    <rect x="886" y="188" width="130" height="28" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="914" y="206" font-size="11" fill="#2563EB" font-weight="500">Export Paychex CSV</text>
+
+    <!-- Quick Totals -->
+    <text x="1032" y="206" font-size="11" fill="#475569" font-weight="500">Quick Totals</text>
+
+    <!-- Record count -->
+    <text x="40" y="235" font-size="11" fill="#94A3B8">18 records</text>
+  </g>
+
+  <!-- Column Headers -->
+  <g class="fade-in cols-fade">
+    <line x1="40" y1="248" x2="1060" y2="248" stroke="#E2E8F0"/>
+    <text x="40" y="264" class="col-header">Employee</text>
+    <text x="230" y="264" class="col-header" text-anchor="middle">Regular hours</text>
+    <text x="340" y="264" class="col-header" text-anchor="middle">Overtime</text>
+    <text x="445" y="264" class="col-header" text-anchor="middle">After hours</text>
+    <text x="555" y="264" class="col-header" text-anchor="middle">Total hours</text>
+    <text x="665" y="264" class="col-header" text-anchor="middle">CC Tips</text>
+    <text x="775" y="264" class="col-header" text-anchor="middle">Cash Tips</text>
+    <text x="880" y="264" class="col-header" text-anchor="middle">Total Tips</text>
+    <text x="1000" y="264" class="col-header" text-anchor="middle">Actions</text>
+    <line x1="40" y1="275" x2="1060" y2="275" stroke="#E2E8F0"/>
+  </g>
+
+  <!-- Row 1: AYALA, GEDALIH -->
+  <g class="fade-in row-1">
+    <text x="40" y="298" class="cell-name">AYALA, GEDALIH (122)</text>
+    <text x="230" y="298" class="cell-text" text-anchor="middle">25.90</text>
+    <text x="340" y="298" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="445" y="298" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="555" y="298" class="cell-text" text-anchor="middle">25.90</text>
+    <!-- CC Tips with green badge -->
+    <rect x="635" y="285" width="60" height="20" rx="10" fill="#DCFCE7" class="exception"/>
+    <text x="665" y="299" class="cell-text" text-anchor="middle" fill="#166534">81.77</text>
+    <text x="775" y="298" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="880" y="298" class="cell-text" text-anchor="middle">81.77</text>
+    <text x="1000" y="298" class="btn" text-anchor="middle">View details</text>
+    <line x1="40" y1="310" x2="1060" y2="310" stroke="#F1F5F9"/>
+  </g>
+
+  <!-- Row 2: BICKNELL, NICCOLO -->
+  <g class="fade-in row-2">
+    <text x="40" y="333" class="cell-name">BICKNELL, NICCOLO (3193)</text>
+    <text x="230" y="333" class="cell-text" text-anchor="middle">41.68</text>
+    <text x="340" y="333" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="445" y="333" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="555" y="333" class="cell-text" text-anchor="middle">41.68</text>
+    <rect x="635" y="320" width="60" height="20" rx="10" fill="#DCFCE7" class="exception"/>
+    <text x="665" y="334" class="cell-text" text-anchor="middle" fill="#166534">98.91</text>
+    <text x="775" y="333" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="880" y="333" class="cell-text" text-anchor="middle">98.91</text>
+    <text x="1000" y="333" class="btn" text-anchor="middle">View details</text>
+    <line x1="40" y1="345" x2="1060" y2="345" stroke="#F1F5F9"/>
+  </g>
+
+  <!-- Row 3: BOYD, JONATHAN -->
+  <g class="fade-in row-3">
+    <text x="40" y="368" class="cell-name">BOYD, JONATHAN (1721)</text>
+    <text x="230" y="368" class="cell-text" text-anchor="middle">70.50</text>
+    <text x="340" y="368" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="445" y="368" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="555" y="368" class="cell-text" text-anchor="middle">70.50</text>
+    <rect x="635" y="355" width="60" height="20" rx="10" fill="#DCFCE7" class="exception"/>
+    <text x="665" y="369" class="cell-text" text-anchor="middle" fill="#166534">150.36</text>
+    <text x="775" y="368" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="880" y="368" class="cell-text" text-anchor="middle">150.36</text>
+    <text x="1000" y="368" class="btn" text-anchor="middle">View details</text>
+    <line x1="40" y1="380" x2="1060" y2="380" stroke="#F1F5F9"/>
+  </g>
+
+  <!-- Row 4: BROWNING, BRODY -->
+  <g class="fade-in row-4">
+    <text x="40" y="403" class="cell-name">BROWNING, BRODY (400)</text>
+    <text x="230" y="403" class="cell-text" text-anchor="middle">38.02</text>
+    <text x="340" y="403" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="445" y="403" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="555" y="403" class="cell-text" text-anchor="middle">38.02</text>
+    <rect x="635" y="390" width="60" height="20" rx="10" fill="#DCFCE7" class="exception"/>
+    <text x="665" y="404" class="cell-text" text-anchor="middle" fill="#166534">129.66</text>
+    <text x="775" y="403" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="880" y="403" class="cell-text" text-anchor="middle">129.66</text>
+    <text x="1000" y="403" class="btn" text-anchor="middle">View details</text>
+    <line x1="40" y1="415" x2="1060" y2="415" stroke="#F1F5F9"/>
+  </g>
+
+  <!-- Row 5: CLARKE, MIKE (exception row - overtime + after hours) -->
+  <g class="fade-in row-5">
+    <text x="40" y="438" class="cell-name">CLARKE, MIKE (2122)</text>
+    <text x="230" y="438" class="cell-text" text-anchor="middle">79.07</text>
+    <!-- Overtime highlighted -->
+    <text x="340" y="438" class="cell-text" text-anchor="middle">6.04</text>
+    <!-- After hours exception -->
+    <rect x="415" y="425" width="60" height="20" rx="10" fill="#FEF3C7" class="exception"/>
+    <text x="445" y="439" class="cell-text" text-anchor="middle" fill="#92400E">1.00</text>
+    <!-- Total hours with info icon -->
+    <rect x="525" y="425" width="60" height="20" rx="10" fill="#DBEAFE"/>
+    <text x="555" y="439" class="cell-text" text-anchor="middle" fill="#1E40AF">86.11</text>
+    <rect x="635" y="425" width="60" height="20" rx="10" fill="#DCFCE7" class="exception"/>
+    <text x="665" y="439" class="cell-text" text-anchor="middle" fill="#166534">151.74</text>
+    <text x="775" y="438" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="880" y="438" class="cell-text" text-anchor="middle">151.74</text>
+    <text x="1000" y="438" class="btn" text-anchor="middle">View details</text>
+    <line x1="40" y1="450" x2="1060" y2="450" stroke="#F1F5F9"/>
+  </g>
+
+  <!-- Row 6: CONTE, ETHAN -->
+  <g class="fade-in row-6">
+    <text x="40" y="473" class="cell-name">CONTE, ETHAN (120)</text>
+    <text x="230" y="473" class="cell-text" text-anchor="middle">44.55</text>
+    <text x="340" y="473" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="445" y="473" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="555" y="473" class="cell-text" text-anchor="middle">44.55</text>
+    <rect x="635" y="460" width="60" height="20" rx="10" fill="#DCFCE7" class="exception"/>
+    <text x="665" y="474" class="cell-text" text-anchor="middle" fill="#166534">119.49</text>
+    <text x="775" y="473" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="880" y="473" class="cell-text" text-anchor="middle">119.49</text>
+    <text x="1000" y="473" class="btn" text-anchor="middle">View details</text>
+    <line x1="40" y1="485" x2="1060" y2="485" stroke="#F1F5F9"/>
+  </g>
+
+  <!-- Row 7: FOSTER, ERICA -->
+  <g class="fade-in row-7">
+    <text x="40" y="508" class="cell-name">FOSTER, ERICA (4710)</text>
+    <text x="230" y="508" class="cell-text" text-anchor="middle">48.23</text>
+    <text x="340" y="508" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="445" y="508" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="555" y="508" class="cell-text" text-anchor="middle">48.23</text>
+    <rect x="635" y="495" width="60" height="20" rx="10" fill="#FEE2E2" class="exception"/>
+    <text x="665" y="509" class="cell-text" text-anchor="middle" fill="#991B1B">94.63</text>
+    <text x="775" y="508" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="880" y="508" class="cell-text" text-anchor="middle">94.63</text>
+    <text x="1000" y="508" class="btn" text-anchor="middle">View details</text>
+    <line x1="40" y1="520" x2="1060" y2="520" stroke="#F1F5F9"/>
+  </g>
+
+  <!-- Row 8: GREENE, HEATHER (exception - regular hours + overtime both flagged) -->
+  <g class="fade-in row-8">
+    <text x="40" y="543" class="cell-name">GREENE, HEATHER (505)</text>
+    <!-- Regular hours flagged -->
+    <rect x="200" y="530" width="60" height="20" rx="10" fill="#FEF3C7" class="exception"/>
+    <text x="230" y="544" class="cell-text" text-anchor="middle" fill="#92400E">80.00</text>
+    <!-- Overtime flagged -->
+    <rect x="310" y="530" width="60" height="20" rx="10" fill="#FEF3C7" class="exception"/>
+    <text x="340" y="544" class="cell-text" text-anchor="middle" fill="#92400E">6.10</text>
+    <text x="445" y="543" class="cell-text" text-anchor="middle">0.00</text>
+    <rect x="525" y="530" width="60" height="20" rx="10" fill="#DBEAFE"/>
+    <text x="555" y="544" class="cell-text" text-anchor="middle" fill="#1E40AF">86.10</text>
+    <rect x="635" y="530" width="60" height="20" rx="10" fill="#DCFCE7" class="exception"/>
+    <text x="665" y="544" class="cell-text" text-anchor="middle" fill="#166534">104.53</text>
+    <text x="775" y="543" class="cell-text" text-anchor="middle">0.00</text>
+    <text x="880" y="543" class="cell-text" text-anchor="middle">104.53</text>
+    <text x="1000" y="543" class="btn" text-anchor="middle">View details</text>
+    <line x1="40" y1="555" x2="1060" y2="555" stroke="#F1F5F9"/>
+  </g>
+
+  <!-- Subtle gradient overlay at bottom to suggest more rows -->
+  <defs>
+    <linearGradient id="fadeBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="565" width="1100" height="55" fill="url(#fadeBottom)"/>
+</svg>
