@@ -4,6 +4,7 @@ description: 'Fresh Food Group, a food service franchise operating ~47 stores ac
 author: 'Matheus Flores'
 pubDate: 'Mar 13 2026'
 heroImage: '../../assets/stock/istockphoto-1139295296-1024x1024.jpg'
+tags: ['Success Story']
 ---
 
 Fresh Food Group (GFF), a food service franchise operating ~47 stores across multiple cities in Brazil, had no structured feedback culture. Managers wanted to give feedback but didn't know how, and a single HR person couldn't scale coaching across a growing network. After deploying Visio Feedback as a post-training follow-through tool, GFF managers exceeded their goal of one feedback per month by up to 16x. In February 2026 alone, 114 structured feedbacks were registered across the network.

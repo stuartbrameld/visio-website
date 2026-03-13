@@ -4,6 +4,7 @@ description: 'Multiple forces are converging in retail—data overload, workforc
 author: 'Matheus Flores'
 pubDate: 'Oct 15 2025'
 heroImage: '../../assets/stock/istockphoto-2209114071-1024x1024.jpg'
+tags: ['Precision Retail']
 ---
 
 In our stores every day, you can sense that something no longer fits. Something fundamental is shifting in retail, and it's not just another fashion trend or a fleeting management approach. Multiple forces are converging, creating a turning point that is both subtle and profound.

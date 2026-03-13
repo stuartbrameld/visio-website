@@ -4,6 +4,7 @@ description: 'Grupo DGK, a Subway franchise group operating 24-hour stores in so
 author: 'Matheus Flores'
 pubDate: 'Mar 13 2026'
 heroImage: '../../assets/stock/istockphoto-1849456277-2048x2048.jpg'
+tags: ['Success Story']
 ---
 
 Grupo DGK, a Subway franchise group operating 24-hour stores in southern Brazil, needed a steady hiring pipeline to keep up with their growth. With no structured interview process and no candidate tracking system, the recruiter role had no playbook. Three months after deploying Visio Recruitment and Selection, DGK had processed 325 applications with AI-assisted screening and built a 104-person talent pool for future hiring.

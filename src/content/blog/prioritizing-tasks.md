@@ -4,6 +4,7 @@ description: 'Discover how the ICE prioritization model can transform chaotic re
 author: 'Matheus Flores'
 pubDate: 'Oct 15 2025'
 heroImage: '../../assets/stock/istockphoto-2214908750-2048x2048.jpg'
+tags: ['Precision Retail']
 ---
 
 In the daily routine of retail and franchise stores, we see two types of managers – the "blank slates" who start each day from scratch, and the "hoarders" who maintain endless to-do lists.
