@@ -1,10 +1,17 @@
-# AGENTS.md — AI Coding Assistant Guidelines
+# AGENTS.md
 
-Instructions for AI coding assistants (Claude Code, Cursor, Copilot, etc.) working on the Visio.ai website.
+> Always keep `CLAUDE.md` and `AGENTS.md` in sync with the same contents.
+> If you update `CLAUDE.md`, always update `AGENTS.md` with the same changes.
 
-## Project Overview
+## Project
 
-Marketing website and blog for **Visio.ai** — an AI co-pilot for store operations. Built with Astro 5, deployed as a static site.
+Marketing website and blog for **Visio.ai** — an AI co-pilot for store operations. Deployed as a static site.
+
+GitHub repo: https://github.com/stuartbrameld/visio-website
+
+## Build
+
+Based on the first-party Astro blog starter template (`withastro/astro/examples/blog`), using Astro version 5.
 
 ## Tech Stack
 
@@ -13,17 +20,42 @@ Marketing website and blog for **Visio.ai** — an AI co-pilot for store operati
 - **Styling**: Vanilla CSS with CSS custom properties (no Tailwind, no CSS-in-JS)
 - **Fonts**: Montserrat (headings) + Inter (body) via Google Fonts
 - **Images**: Optimised with `astro:assets` and Sharp
-- **Package manager**: pnpm
+- **Package manager**: pnpm (not npm)
 - **Integrations**: `@astrojs/mdx`, `@astrojs/rss`, `@astrojs/sitemap`
 
-## Astro Documentation
+## Astro Docs
 
-Always comply with Astro best practices and conventions. When unsure, check the latest Astro documentation:
+All docs are available here:
+- https://docs.astro.build/llms.txt
+- https://docs.astro.build/llms-full.txt
 
-- Docs: https://docs.astro.build
-- LLM reference: https://docs.astro.build/llms.txt
-- Full LLM reference: https://docs.astro.build/llms-full.txt
-- MCP server: https://mcp.docs.astro.build/mcp (use the `search_astro_docs` tool)
+You can also use the Astro Docs MCP server at https://mcp.docs.astro.build/mcp (use the `search_astro_docs` tool).
+
+## Commands
+
+```bash
+pnpm dev       # Start dev server (port 4321)
+pnpm build     # Production build
+pnpm preview   # Preview production build
+```
+
+## Blogs
+
+Blog posts go in `src/content/blog/`. Default to plain Markdown (`.md`) over `.mdx`.
+
+Blog frontmatter fields:
+
+```yaml
+title: 'Precision Retail: The future is about maximizing your store''s full potential'
+description: 'Precision Retail is a methodology focused on prioritizing resources and efforts to maximize ROI in physical stores, bringing the same level of control and learning speed that e-commerce has long enjoyed.'
+author: 'Matheus Flores'
+pubDate: 'Oct 15 2025'
+heroImage: '../../assets/blog-placeholder-1.jpg'
+```
+
+- **Required**: `title`, `description`, `author`, `pubDate`, `heroImage` — all blog posts must include these fields or the build will fail (enforced by the Zod schema in `src/content.config.ts`).
+- **Optional**: `updatedDate`
+- Hero images should be placed in `src/assets/`
 
 ## Project Structure
 
@@ -69,6 +101,8 @@ The brand uses a teal/turquoise palette with blue-to-green gradient accents. All
 - **Logo gradient**: #00A5DB (blue) → #71C27D (green) — do not change these
 - **Neutrals**: `--gray-50` through `--gray-900`
 - **Semantic tokens**: `--color-accent`, `--color-text`, `--color-bg`, etc.
+- **Brand & design system**: For brand guidelines, visual identity, and positioning, see https://github.com/Visio-ai/arch-design-system/tree/master/domains
+- **Design direction**: Matheus (CEO) wants a more premium feel — prioritise refinement, generous whitespace, and polished details over flashy effects
 
 ### Typography
 
@@ -107,26 +141,11 @@ The brand uses a teal/turquoise palette with blue-to-green gradient accents. All
 - Use existing spacing/colour/radius variables rather than hardcoded values
 - Mobile breakpoint: `768px`
 
-### Content
-
-- Blog posts go in `src/content/blog/` as `.md` or `.mdx` files
-- Required frontmatter: `title`, `description`, `pubDate`
-- Optional: `updatedDate`, `heroImage`
-- Hero images should be placed in `src/assets/`
-
 ### Logos
 
 - Header (light background): `/logo.svg` — dark text with gradient accents
 - Footer (dark background): `/logo-white.svg` — white text with gradient accents
 - Do not recreate or modify the logo SVGs
-
-## Commands
-
-```bash
-pnpm dev       # Start dev server (port 4321)
-pnpm build     # Production build
-pnpm preview   # Preview production build
-```
 
 ## Do's
 
