@@ -5,6 +5,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -13,44 +14,68 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={`${title} — ${SITE_TITLE}`} description={description} />
 		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
+			.article-header {
+				padding: var(--space-3xl) 0 var(--space-xl);
 				text-align: center;
-				line-height: 1;
 			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
+
+			.article-header .container {
+				max-width: 720px;
 			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
+
+			.article-meta {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: var(--space-md);
+				margin-bottom: var(--space-lg);
+				font-size: 0.85rem;
+				color: var(--color-text-tertiary);
 			}
-			.last-updated-on {
+
+			.article-meta .updated {
 				font-style: italic;
+			}
+
+			.article-header h1 {
+				font-size: clamp(1.75rem, 4vw, 2.75rem);
+				max-width: 640px;
+				margin: 0 auto;
+			}
+
+			.hero-image {
+				max-width: 960px;
+				margin: 0 auto var(--space-3xl);
+				padding: 0 var(--space-lg);
+			}
+
+			.hero-image img {
+				width: 100%;
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-lg);
+			}
+
+			.article-body {
+				max-width: var(--max-width-narrow);
+				margin: 0 auto;
+				padding: 0 var(--space-lg) var(--space-5xl);
+			}
+
+			.back-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.35em;
+				font-family: var(--font-display);
+				font-weight: 500;
+				font-size: 0.85rem;
+				color: var(--color-text-secondary);
+				margin-bottom: var(--space-xl);
+			}
+
+			.back-link:hover {
+				color: var(--color-accent);
 			}
 		</style>
 	</head>
@@ -58,27 +83,31 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<body>
 		<Header />
 		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
+			<section class="article-header">
+				<div class="container">
+					<a href="/blog" class="back-link">&larr; Back to blog</a>
+					<div class="article-meta">
+						<FormattedDate date={pubDate} />
+						{
+							updatedDate && (
+								<span class="updated">
+									Updated <FormattedDate date={updatedDate} />
+								</span>
+							)
+						}
 					</div>
-					<slot />
+					<h1>{title}</h1>
 				</div>
+			</section>
+
+			{heroImage && (
+				<div class="hero-image">
+					<Image width={960} height={480} src={heroImage} alt="" />
+				</div>
+			)}
+
+			<article class="article-body prose">
+				<slot />
 			</article>
 		</main>
 		<Footer />

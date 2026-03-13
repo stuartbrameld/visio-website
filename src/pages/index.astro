@@ -12,38 +12,422 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
+
+		<!-- Hero -->
+		<section class="hero">
+			<div class="hero-bg" aria-hidden="true">
+				<div class="hero-gradient"></div>
+				<div class="hero-grid-pattern"></div>
+			</div>
+			<div class="container hero-content">
+				<p class="hero-badge animate-in">AI Co-Pilot for Store Operations</p>
+				<h1 class="animate-in animate-in-delay-1">
+					Your store at its best —<br />
+					<span class="hero-accent">every day.</span>
+				</h1>
+				<p class="hero-description animate-in animate-in-delay-2">
+					Visio is your AI co-pilot for store operations, helping you scale operational excellence across all locations. From preventing fraud to forecasting daily sales, we help you make better decisions — based on real data from your stores.
+				</p>
+				<div class="hero-actions animate-in animate-in-delay-3">
+					<a href="/contact" class="btn btn--primary">Schedule a demo</a>
+					<a href="/about" class="btn btn--secondary">Learn more</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Stats -->
+		<section class="stats">
+			<div class="container">
+				<div class="stats-grid">
+					<div class="stat animate-in animate-in-delay-1">
+						<span class="stat-number">U$30</span>
+						<span class="stat-label">ROI for every U$1 invested</span>
+					</div>
+					<div class="stat animate-in animate-in-delay-2">
+						<span class="stat-number">30+</span>
+						<span class="stat-label">Percentage point reduction in COGS</span>
+					</div>
+					<div class="stat animate-in animate-in-delay-3">
+						<span class="stat-number">10.2h</span>
+						<span class="stat-label">Saved per store, per day</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features -->
+		<section class="features">
+			<div class="container">
+				<div class="section-header animate-in">
+					<p class="section-label">Solutions</p>
+					<h2>Solve the problems that matter most</h2>
+					<p class="section-description">
+						From loss prevention to sales forecasting, Visio surfaces actionable insights from your store's real-time data.
+					</p>
+				</div>
+				<div class="features-grid">
+					<div class="feature-card animate-in animate-in-delay-1">
+						<div class="feature-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+							</svg>
+						</div>
+						<h3>Cash Inconsistencies</h3>
+						<p>Unrecorded sales, incorrect entries, and cancelled coupons — flagged with clear video evidence.</p>
+					</div>
+					<div class="feature-card animate-in animate-in-delay-2">
+						<div class="feature-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M23 6l-9.5 9.5-5-5L1 18"/>
+								<path d="M17 6h6v6"/>
+							</svg>
+						</div>
+						<h3>High COGS in Production</h3>
+						<p>Identify over-portioning, waste, and assembly errors that increase costs and eat into margins.</p>
+					</div>
+					<div class="feature-card animate-in animate-in-delay-3">
+						<div class="feature-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+								<circle cx="9" cy="7" r="4"/>
+								<path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+								<path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+							</svg>
+						</div>
+						<h3>High Turnover, Slow Training</h3>
+						<p>Find recurring errors and correct them with short, targeted training sessions that drive results.</p>
+					</div>
+					<div class="feature-card animate-in animate-in-delay-4">
+						<div class="feature-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+								<circle cx="12" cy="12" r="10"/>
+								<path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+								<line x1="9" y1="9" x2="9.01" y2="9"/>
+								<line x1="15" y1="9" x2="15.01" y2="9"/>
+							</svg>
+						</div>
+						<h3>Missed Revenue Opportunities</h3>
+						<p>Sales analysis to identify upselling and complementary sales opportunities you're leaving on the table.</p>
+					</div>
+					<div class="feature-card animate-in animate-in-delay-5">
+						<div class="feature-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+								<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+								<line x1="16" y1="2" x2="16" y2="6"/>
+								<line x1="8" y1="2" x2="8" y2="6"/>
+								<line x1="3" y1="10" x2="21" y2="10"/>
+							</svg>
+						</div>
+						<h3>Outdated Forecasts</h3>
+						<p>Set goals based on actual performance to align objectives and execution across every location.</p>
+					</div>
+					<div class="feature-card animate-in animate-in-delay-5">
+						<div class="feature-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+							</svg>
+						</div>
+						<h3>Delivery Disputes</h3>
+						<p>Record final assembly to dispute false claims and protect revenue with clear visual evidence.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section class="cta">
+			<div class="container">
+				<div class="cta-card animate-in">
+					<div class="cta-bg" aria-hidden="true"></div>
+					<h2>Ready to see the difference?</h2>
+					<p>The investment pays off in the first few weeks. Join the stores already seeing +35% increases in sales with Visio.ai.</p>
+					<div class="cta-actions">
+						<a href="/contact" class="btn btn--primary btn--light">Schedule a demo</a>
+						<a href="/blog" class="btn btn--secondary btn--light">Read our blog</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<Footer />
 	</body>
 </html>
+
+<style>
+	/* ─── Hero ─── */
+
+	.hero {
+		position: relative;
+		padding: var(--space-5xl) 0;
+		overflow: hidden;
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.hero-bg {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+	}
+
+	.hero-gradient {
+		position: absolute;
+		inset: 0;
+		background:
+			radial-gradient(ellipse 80% 60% at 20% 40%, rgba(31, 192, 162, 0.08) 0%, transparent 70%),
+			radial-gradient(ellipse 60% 50% at 80% 30%, rgba(32, 188, 204, 0.06) 0%, transparent 70%);
+	}
+
+	.hero-grid-pattern {
+		position: absolute;
+		inset: 0;
+		background-image:
+			linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+		background-size: 60px 60px;
+		mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 70%);
+		-webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 70%);
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 1;
+		max-width: 720px;
+	}
+
+	.hero-badge {
+		display: inline-block;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 0.8rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--color-accent);
+		background: var(--teal-50);
+		padding: 0.45em 1em;
+		border-radius: 100px;
+		border: 1px solid var(--teal-200);
+		margin-bottom: var(--space-xl);
+	}
+
+	.hero h1 {
+		margin-bottom: var(--space-lg);
+	}
+
+	.hero-accent {
+		background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.hero-description {
+		font-size: 1.15rem;
+		color: var(--color-text-secondary);
+		line-height: 1.7;
+		max-width: 560px;
+		margin-bottom: var(--space-2xl);
+	}
+
+	.hero-actions {
+		display: flex;
+		gap: var(--space-md);
+		flex-wrap: wrap;
+	}
+
+	/* ─── Stats ─── */
+
+	.stats {
+		padding: var(--space-4xl) 0;
+		border-top: 1px solid var(--color-border);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.stats-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--space-xl);
+		text-align: center;
+	}
+
+	.stat {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-xs);
+	}
+
+	.stat-number {
+		font-family: var(--font-display);
+		font-weight: 800;
+		font-size: clamp(2rem, 3.5vw, 2.75rem);
+		letter-spacing: -0.03em;
+		background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.stat-label {
+		font-size: 0.85rem;
+		color: var(--color-text-secondary);
+		font-weight: 500;
+	}
+
+	/* ─── Features ─── */
+
+	.features {
+		padding: var(--space-5xl) 0;
+		background: var(--color-bg-subtle);
+	}
+
+	.section-header {
+		text-align: center;
+		max-width: 560px;
+		margin: 0 auto var(--space-3xl);
+	}
+
+	.section-label {
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 0.8rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--color-accent);
+		margin-bottom: var(--space-sm);
+	}
+
+	.section-description {
+		font-size: 1.05rem;
+		color: var(--color-text-secondary);
+		line-height: 1.7;
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--space-lg);
+	}
+
+	.feature-card {
+		background: var(--white);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+		padding: var(--space-2xl);
+		transition: all var(--transition-base);
+	}
+
+	.feature-card:hover {
+		box-shadow: var(--shadow-md);
+		border-color: var(--teal-200);
+		transform: translateY(-2px);
+	}
+
+	.feature-icon {
+		width: 44px;
+		height: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(135deg, var(--teal-50), var(--teal-100));
+		border-radius: var(--radius-md);
+		color: var(--teal-600);
+		margin-bottom: var(--space-lg);
+	}
+
+	.feature-card h3 {
+		font-size: 1.15rem;
+		margin-bottom: var(--space-sm);
+	}
+
+	.feature-card p {
+		color: var(--color-text-secondary);
+		font-size: 0.92rem;
+		line-height: 1.65;
+		margin: 0;
+	}
+
+	/* ─── CTA ─── */
+
+	.cta {
+		padding: var(--space-5xl) 0;
+	}
+
+	.cta-card {
+		position: relative;
+		overflow: hidden;
+		background: var(--gray-900);
+		border-radius: var(--radius-xl);
+		padding: var(--space-4xl) var(--space-3xl);
+		text-align: center;
+	}
+
+	.cta-bg {
+		position: absolute;
+		inset: 0;
+		background:
+			radial-gradient(ellipse 50% 60% at 30% 20%, rgba(31, 192, 162, 0.15) 0%, transparent 70%),
+			radial-gradient(ellipse 40% 50% at 80% 80%, rgba(32, 188, 204, 0.1) 0%, transparent 70%);
+	}
+
+	.cta-card h2 {
+		position: relative;
+		color: var(--white);
+		margin-bottom: var(--space-md);
+	}
+
+	.cta-card p {
+		position: relative;
+		color: var(--gray-400);
+		font-size: 1.05rem;
+		max-width: 480px;
+		margin: 0 auto var(--space-2xl);
+		line-height: 1.7;
+	}
+
+	.cta-actions {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		gap: var(--space-md);
+		flex-wrap: wrap;
+	}
+
+	.btn--light.btn--secondary {
+		border-color: var(--gray-700);
+		color: var(--gray-300);
+	}
+
+	.btn--light.btn--secondary:hover {
+		border-color: var(--gray-500);
+		color: var(--white);
+	}
+
+	/* ─── Responsive ─── */
+
+	@media (max-width: 768px) {
+		.hero {
+			padding: var(--space-3xl) 0 var(--space-4xl);
+			min-height: auto;
+		}
+
+		.features-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.stats-grid {
+			grid-template-columns: 1fr;
+			gap: var(--space-2xl);
+		}
+
+		.cta-card {
+			padding: var(--space-3xl) var(--space-xl);
+		}
+	}
+
+	@media (min-width: 769px) and (max-width: 1024px) {
+		.features-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+</style>
