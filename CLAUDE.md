@@ -116,6 +116,7 @@ The brand uses a blue primary with cyan secondary and orange accent. All colours
 - Display headings (42px+): weight 300. Small headings (16-20px): weight 600
 - `font-variant-numeric: tabular-nums` on all numbers
 - Uppercase: overlines and tags only — never for body text or headings
+- **Reference**: For typography questions (line-height, paragraph spacing, prose styling), reference the [Tailwind Typography plugin](https://github.com/tailwindlabs/tailwindcss-typography) and Tailwind best practices as a benchmark — but implement in vanilla CSS, not as a dependency
 
 ### Spacing & Layout
 
